@@ -10,9 +10,9 @@ namespace Chess
     {
         bool whiteBishop; //true = white bishop, false = black bishop
 
-        public Bishop(bool isWhite) : base(3, 'B', "Bishop")
+        public Bishop(bool isWhiteBishop, bool isWhitePlayers) : base(3, 'B', "Bishop", isWhitePlayers)
         {
-            whiteBishop = isWhite;
+            whiteBishop = isWhiteBishop;
         }
     }
 }

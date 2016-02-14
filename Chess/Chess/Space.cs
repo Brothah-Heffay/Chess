@@ -14,5 +14,19 @@ namespace Chess
         bool attackedByBlack; //same as above for black
 
         Piece piece; //piece on space if (occupied == true)
+
+        public Space(bool isWhite)
+        {
+            occupied = false;
+            white = isWhite;
+            attackedByWhite = false;
+            attackedByBlack = false;
+        }
+
+        void addPiece(Piece p)
+        {
+            occupied = true;
+            piece = p;
+        }
     }
 }

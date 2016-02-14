@@ -11,7 +11,7 @@ namespace Chess
         bool hasMovedTwoSpaces;
         bool hasReachedBackRank;
 
-        public Pawn() : base(1, 'P', "Pawn")
+        public Pawn(bool isWhitePlayers) : base(1, 'P', "Pawn", isWhitePlayers)
         {
             hasMovedTwoSpaces = false;
             hasReachedBackRank = false;

@@ -8,7 +8,7 @@ namespace Chess
 {
     class Queen : Piece
     {
-        public Queen() : base(9, 'Q', "Queen")
+        public Queen(bool isWhitePlayers) : base(9, 'Q', "Queen", isWhitePlayers)
         { }
     }
 }

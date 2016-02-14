@@ -10,7 +10,7 @@ namespace Chess
     {
         bool hasMoved; //for castling
 
-        public Rook() : base(5, 'R', "Rook")
+        public Rook(bool isWhitePlayers) : base(5, 'R', "Rook", isWhitePlayers)
         {
             hasMoved = false;
         }

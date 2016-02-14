@@ -12,7 +12,7 @@ namespace Chess
         bool inCheck; //if the king is currently being attacked by an opponent's piece
         //if canMove == false and inCheck == true, then that king's side loses (Checkmate)
 
-        public King() : base(0, 'K', "King")
+        public King(bool IsWhitePlayers) : base(0, 'K', "King", IsWhitePlayers)
         {
             canMove = false;
             inCheck = false;
