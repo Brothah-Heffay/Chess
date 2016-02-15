@@ -23,10 +23,19 @@ namespace Chess
             attackedByBlack = false;
         }
 
-        void addPiece(Piece p)
+        public void setPiece(Piece p)
         {
             occupied = true;
             piece = p;
+        }
+
+        public char getSpaceChar()
+        {
+            if (occupied)
+            {
+                return piece.RepChar;
+            }
+            return '_';
         }
     }
 }

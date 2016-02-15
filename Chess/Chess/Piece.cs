@@ -22,5 +22,10 @@ namespace Chess
             name = n;
             white = w;
         }
+
+        public char RepChar
+        {
+            get { return repChar; }
+        }
     }
 }
