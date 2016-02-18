@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Chess
 {
-    class Program
+    class Rook : Piece
     {
-        static void Main(string[] args)
+        bool hasMoved; //for castling
+
+        public Rook(bool isWhitePlayers) : base(5, 'R', "Rook", isWhitePlayers)
         {
-            Board b = new Board();
-            b.display();
-            Console.ReadLine();
+            hasMoved = false;
         }
     }
 }
