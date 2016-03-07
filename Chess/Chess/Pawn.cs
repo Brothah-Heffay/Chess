@@ -8,8 +8,8 @@ namespace Chess
 {
     class Pawn : Piece
     {
-        bool hasMovedTwoSpaces;
-        bool hasReachedBackRank;
+        bool hasMovedTwoSpaces;  //First move only
+        bool hasReachedBackRank; //To promote
 
         public Pawn(bool isWhitePlayers) : base(1, 'P', "Pawn", isWhitePlayers)
         {

@@ -8,12 +8,13 @@ namespace Chess
 {
     class Space
     {
-        bool occupied;
-        bool white; //False: Black; True: White
+        bool occupied; //By a piece
+        bool white; //False: Black; True: White  (color of space)
         bool attackedByWhite; //white has a piece that can move to this space (or this space is guarded by a white piece)
         bool attackedByBlack; //same as above for black
 
         Piece piece; //piece on space if (occupied == true)
+
 
         public Space(bool isWhite)
         {
@@ -23,12 +24,14 @@ namespace Chess
             attackedByBlack = false;
         }
 
+        //Place a piece on this space
         public void setPiece(Piece p)
         {
             occupied = true;
             piece = p;
         }
 
+        //Returns the space's char representation (of the piece on the space, or _  for blank)
         public char getSpaceChar()
         {
             if (occupied)

@@ -11,7 +11,7 @@ namespace Chess
         bool alive;
         int value; //pawn = 1, bishop and knight = 3, rook = 5, queen = 9, king = invaluable
         char repChar; //its character (letter) that it is represented by on the board
-        string name;
+        string name; //of the piece
         bool white; //controlled by the white player = true, black player = false
 
         public Piece(int v, char rc, string n, bool w)

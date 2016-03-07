@@ -10,6 +10,7 @@ namespace Chess
     {
         Space[,] board = new Space[8,8];
 
+        //Initializes a new board in the start game arrangement
         public Board()
         {
             for(int i = 0; i < 8; i++)
@@ -101,7 +102,7 @@ namespace Chess
                 }
 
             }
-        } //Initializes a new board in the start game arrangement
+        } 
 
         public void display() //Displays the pieces on the board
         {
