@@ -8,11 +8,11 @@ namespace Chess
 {
     class Bishop : Piece
     {
-        bool whiteBishop; //true = white bishop, false = black bishop
+        bool whiteSpaced; //true = white-spaced bishop, false = black-spaced bishop
 
         public Bishop(bool isWhiteBishop, bool isWhitePlayers) : base(3, 'B', "Bishop", isWhitePlayers)
         {
-            whiteBishop = isWhiteBishop;
+            whiteSpaced = isWhiteBishop;
         }
     }
 }

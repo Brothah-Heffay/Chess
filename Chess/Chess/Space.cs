@@ -12,9 +12,7 @@ namespace Chess
         bool white; //False: Black; True: White  (color of space)
         bool attackedByWhite; //white has a piece that can move to this space (or this space is guarded by a white piece)
         bool attackedByBlack; //same as above for black
-
         Piece piece; //piece on space if (occupied == true)
-
 
         public Space(bool isWhite)
         {
@@ -38,7 +36,7 @@ namespace Chess
             {
                 return piece.RepChar;
             }
-            return '_';
+            return '_'; //Space-holder for the character that represents a blank space (baby)
         }
     }
 }

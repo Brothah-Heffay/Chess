@@ -8,7 +8,7 @@ namespace Chess
 {
     class Knight : Piece
     {
-        //The knight doesn't need any unique fields
+        //The knight doesn't need any unique fields (yet)
         public Knight(bool isWhitePlayers) : base(3, 'N', "Knight", isWhitePlayers)
         { }
 

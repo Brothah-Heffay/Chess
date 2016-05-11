@@ -12,9 +12,10 @@ namespace Chess
         bool inCheck; //if the king is currently being attacked by an opponent's piece
                       
         //if canMove == false and inCheck == true, and 
-        //your side can't take the checking piece or block the checking piece
-        //then that king's side loses (Checkmate)
+        //the king's side can't take the checking piece or block the checking piece
+        //then the king's side loses (Checkmate)
 
+        //Creates new king piece. Since the king is invaluable, his value number is 0. (This can be modified later)
         public King(bool IsWhitePlayers) : base(0, 'K', "King", IsWhitePlayers)
         {
             canMove = false;

@@ -8,7 +8,7 @@ namespace Chess
 {
     class Queen : Piece
     {
-        //Queen doesn't have any unique fields
+        //Queen doesn't have any unique fields (yet)
         public Queen(bool isWhitePlayers) : base(9, 'Q', "Queen", isWhitePlayers)
         { }
     }
