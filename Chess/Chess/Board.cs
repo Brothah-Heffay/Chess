@@ -13,14 +13,42 @@ namespace Chess
         //Initializes a new board in the start game arrangement
         public Board()
         {
-            //Fills the board with alternating black/white spaces
+            //Fills the board with alternating black/white spaces with names representing their rank and file
             for(int i = 0; i < 8; i++)
             {
                 for(int j = 0; j < 8; j++)
                 {
+                    char f = ' ';
+                    switch(j)
+                    {
+                        case 0:
+                            f = 'a';
+                            break;
+                        case 1:
+                            f = 'b';
+                            break;
+                        case 2:
+                            f = 'c';
+                            break;
+                        case 3:
+                            f = 'd';
+                            break;
+                        case 4:
+                            f = 'e';
+                            break;
+                        case 5:
+                            f = 'f';
+                            break;
+                        case 6:
+                            f = 'g';
+                            break;
+                        case 7:
+                            f = 'h';
+                            break;
+                    }
                     bool white = true;
                     if ((i + j) % 2 == 1){ white = false; }
-                    board[i, j] = new Space(white);
+                    board[i, j] = new Space(white, f, 8 - i, "" + f + (8 - i));
                 }
             }
 
@@ -57,7 +85,6 @@ namespace Chess
                         if (i == 1) //Black Pawns
                         {
                             board[i, j].setPiece(new Pawn(false));
-                            //Console.WriteLine("Black Pawn");
                         }
                     }
                     else if (i > 5) //Last two rows (white pieces)
@@ -101,6 +128,16 @@ namespace Chess
                 for (int j = 0; j < 8; j++)
                 {
                     Console.Write(board[i, j].getSpaceChar());
+                }
+                Console.Write("\n");
+            }
+
+            //Shows the names of the spaces
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    Console.Write(board[i, j].Name + " ");
                 }
                 Console.Write("\n");
             }

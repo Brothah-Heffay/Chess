@@ -13,6 +13,8 @@ namespace Chess
         char repChar; //its character (letter) that it is represented by on the board
         string name; //of the piece
         bool white; //controlled by the white player = true, black player = false
+        List<Space> attackedSpaces = new List<Space>(); //spaces threatened by this piece (spaces that the piece can move to)
+        //Should this^ be a list of strings instead? (of space names, eg: a3, e4, d7, etc)
 
         public Piece(int v, char rc, string n, bool w)
         {

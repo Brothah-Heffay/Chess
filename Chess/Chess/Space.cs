@@ -10,16 +10,24 @@ namespace Chess
     {
         bool occupied; //By a piece
         bool white; //False: Black; True: White  (color of space)
-        bool attackedByWhite; //white has a piece that can move to this space (or this space is guarded by a white piece)
-        bool attackedByBlack; //same as above for black
+        bool attackedByWhite; //white has a piece that can move to this space (or this space is guarded by a white piece) [is necessary?]
+        bool attackedByBlack; //same as above for black [is this necessary?]
         Piece piece; //piece on space if (occupied == true)
+        char file; //vertical columns (a-h)
+        int rank; //horizontal rows (1-8)
+        string name; //the space identifier (a1 through h8)
 
-        public Space(bool isWhite)
+        public string Name { get { return name; } }
+
+        public Space(bool isWhite, char f, int r, string n)
         {
             occupied = false;
             white = isWhite;
             attackedByWhite = false;
             attackedByBlack = false;
+            file = f;
+            rank = r;
+            name = n;
         }
 
         //Place a piece on this space
